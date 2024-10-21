@@ -1,12 +1,11 @@
 // full_server/routes/index.js
-import express from 'express';
 import AppController from '../controllers/AppController.js';
 import StudentsController from '../controllers/StudentsController.js';
 
-const router = express.Router();
+const mapRoutes = (app) => {
+  app.get('/', AppController.getHomepage);
+  app.get('/students', StudentsController.getAllStudents);
+  app.get('/students/:major', StudentsController.getAllStudentsByMajor);
+};
 
-router.get('/', AppController.getHomepage);
-router.get('/students', StudentsController.getAllStudents);
-router.get('/students/:major', StudentsController.getAllStudentsByMajor);
-
-export default router;
+export default mapRoutes;
