@@ -1,7 +1,7 @@
 import { spy } from 'sinon';
 import Utils from './utils';
 import { expect } from 'chai';
-import sendPaymentRequestToApi from './3-payment';
+import sendPaymentRequestToApi from './3-payment.js';
 
 describe('sendPaymentRequestToApi', () => {
   it('sendPaymentRequestToApi uses the calculateNumber method of Utils', () => {

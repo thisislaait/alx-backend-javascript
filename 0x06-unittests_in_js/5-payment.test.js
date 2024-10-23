@@ -1,6 +1,6 @@
 import { spy } from 'sinon';
 import { expect } from 'chai';
-import sendPaymentRequestToApi from './5-payment';
+import sendPaymentRequestToApi from './5-payment.js';
 
 describe('sendPaymentRequestToApi', () => {
   let bigBrother;

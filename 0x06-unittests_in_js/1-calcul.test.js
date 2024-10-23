@@ -1,5 +1,5 @@
 import { strictEqual } from 'assert';
-import calculateNumber from './1-calcul';
+import calculateNumber from './1-calcul.js';
 
 describe('calculateNumber', () => {
   describe('type == "SUM"', () => {

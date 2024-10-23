@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import getPaymentTokenFromAPI from './6-payment_token';
+import getPaymentTokenFromAPI from './6-payment_token.js';
 
 describe('getPaymentTokenFromAPI', () => {
   it('getPaymentTokenFromAPI(success), where success == true', (done) => {
