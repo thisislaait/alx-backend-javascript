@@ -1,5 +1,5 @@
-const { expect } = require('chai');
-const getPaymentTokenFromAPI = require('./6-payment_token');
+import { expect } from 'chai';
+import getPaymentTokenFromAPI from './6-payment_token';
 
 describe('getPaymentTokenFromAPI', () => {
   it('getPaymentTokenFromAPI(success), where success == true', (done) => {
