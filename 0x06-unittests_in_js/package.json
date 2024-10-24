@@ -2,52 +2,29 @@
   "name": "unittests_in_js",
   "version": "1.0.0",
   "description": "A project for learning the basics of unittests in Node.js.",
-  "type": "module",
-  "main": "index.js",
+
   "scripts": {
-    "lint": "eslint . --fix",
-    "check-lint": "npx eslint controllers/ libs/ middlewares/ routes/ utils/ server.js worker.js",
-    "start-server": "npx nodemon --exec babel-node --presets @babel/preset-env ./server.js",
-    "start-worker": "npx nodemon --exec babel-node --presets @babel/preset-env ./worker.js",
-    "dev": "npx nodemon --exec babel-node --presets @babel/preset-env ./full_server/server.js ./database.csv",
-    "test": "mocha --require @babel/register 'tests/**/*.test.js'",
-    "coveralls": "npx nyc npx mocha --opts mocha.opts tests/**/*.js && npx nyc report --reporter=text-lcov | npx coveralls"
+    "lint": "./node_modules/.bin/eslint",
+    "lint-all": "./node_modules/.bin/eslint [0-9]*.js",
+    "lint-fix-all": "./node_modules/.bin/eslint --fix [0-9]*.js",
+    "test": "node ./node_modules/mocha/bin/mocha --require babel-register --exit",
+    "dev": "nodemon --exec babel-node --presets babel-preset-env ./full_server/server.js ./database.csv"
   },
-  "repository": {
-    "type": "module",
-    "url": "git+https://github.com/thisislaait/alx-files_manager.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/thisislaait/alx-files_manager/issues"
-  },
-  "homepage": "https://github.com/thisislaait/alx-files_manager#readme",
   "dependencies": {
-    "bull": "^3.16.0",
     "chai-http": "^4.3.0",
     "express": "^4.17.1"
   },
   "devDependencies": {
-    "@babel/cli": "^7.8.0",
-    "@babel/core": "^7.8.0",
-    "@babel/node": "^7.8.0",
-    "@babel/preset-env": "^7.8.2",
-    "@babel/register": "^7.8.0",
-    "chai": "^4.2.0",
-    "chai-http": "^4.3.0",
-    "coveralls": "^3.1.1",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "nodemon": "^2.0.2",
     "eslint": "^6.4.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jest": "^22.17.0",
-    "mocha": "^10.7.3",
-    "mocha-lcov-reporter": "^1.3.0",
-    "nodemon": "^2.0.2",
-    "nyc": "^15.1.0",
+    "chai": "^4.2.0",
+    "mocha": "^6.2.2",
     "request": "^2.88.0",
-    "sinon": "^7.5.0",
-    "supertest": "^6.2.3"
+    "sinon": "^7.5.0"
   }
 }

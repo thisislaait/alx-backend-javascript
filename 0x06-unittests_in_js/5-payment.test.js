@@ -1,13 +1,13 @@
-import { spy } from 'sinon';
-import { expect } from 'chai';
-import sendPaymentRequestToApi from './5-payment.js';
+const sinon = require('sinon');
+const { expect } = require('chai');
+const sendPaymentRequestToApi = require('./5-payment');
 
 describe('sendPaymentRequestToApi', () => {
   let bigBrother;
 
   beforeEach(() => {
     if (!bigBrother) {
-      bigBrother = spy(console);
+      bigBrother = sinon.spy(console);
     }
   });
 

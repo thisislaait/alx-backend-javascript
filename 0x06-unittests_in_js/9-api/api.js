@@ -1,4 +1,4 @@
-import express from 'express';
+const express = require('express');
 
 const app = express();
 const PORT = 7865;
@@ -17,4 +17,4 @@ app.listen(PORT, () => {
   console.log(`API available on localhost port ${PORT}`);
 });
 
-export default app;
+module.exports = app;

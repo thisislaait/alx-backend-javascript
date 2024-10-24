@@ -1,12 +1,14 @@
-Learning Objectives
-At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
+# Unittests in JS
 
-run javascript using NodeJS
-use NodeJS modules
-use specific Node JS module to read files
-use process to access command line arguments and the environment
-create a small HTTP server using Node JS
-create a small HTTP server using Express JS
-create advanced routes with Express JS
-use ES6 with Node JS with Babel-node
-use Nodemon to develop faster
+This project contains tasks for learning to create unittests in NodeJS.
+
+## Learning Objectives
+
++ How to use Mocha to write a test suite.
++ How to use different assertion libraries (Node or Chai).
++ How to present long test suites.
++ When and how to use spies.
++ When and how to use stubs.
++ What are hooks and when to use them.
++ Unit testing with Async functions.
++ How to write integration tests with a small node server.

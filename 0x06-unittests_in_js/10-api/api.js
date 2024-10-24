@@ -1,9 +1,9 @@
-import express, { json } from 'express';
+const express = require('express');
 
 const app = express();
 const PORT = 7865;
 
-app.use(json());
+app.use(express.json());
 
 app.get('/', (_req, res) => {
   res.send('Welcome to the payment system');
@@ -33,4 +33,4 @@ app.listen(PORT, () => {
   console.log(`API available on localhost port ${PORT}`);
 });
 
-export default app;
+module.exports = app;
